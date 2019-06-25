@@ -15,16 +15,16 @@
 
 # SCRIPT OPTIONS
 
-OPENCV_VERSION='4.1.0'    # Version to be installed
-# OPENCV_CONTRIB='NO'       # Install OpenCV's extra modules
+OPENCV_VERSION='3.4.6'    # Version to be installed
+OPENCV_CONTRIB='YES'       # Install OpenCV's extra modules
 
 
 # 1. KEEP UBUNTU OR DEBIAN UP TO DATE
 
 sudo apt-get -y update
-# sudo apt-get -y upgrade       # Uncomment to install new versions of packages currently installed
-# sudo apt-get -y dist-upgrade  # Uncomment to handle changing dependencies with new vers. of pack.
-# sudo apt-get -y autoremove    # Uncomment to remove packages that are now no longer needed
+sudo apt-get -y upgrade       # Uncomment to install new versions of packages currently installed
+sudo apt-get -y dist-upgrade  # Uncomment to handle changing dependencies with new vers. of pack.
+sudo apt-get -y autoremove    # Uncomment to remove packages that are now no longer needed
 
 
 # 2. INSTALL THE DEPENDENCIES
@@ -71,6 +71,8 @@ sudo make install
 sudo ldconfig
 
 
-# 4. EXECUTE SOME OPENCV EXAMPLES AND COMPILE A DEMONSTRATION
+# 4. EXTRA: GITKRAKEN AND PYCHARM
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+sudo dpkg -i gitkraken-amd64.deb
 
-# To complete this step, please visit 'http://milq.github.io/install-opencv-ubuntu-debian'.
+snap install pycharm-community --classic
